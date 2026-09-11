@@ -51,6 +51,11 @@
   code.pkg{background:#f2eee2;padding:1px 6px;border-radius:5px;font:13px/1.6 ui-monospace,Consolas,monospace}
   .small{font-size:14px;color:var(--muted)}
 
+  table.ds{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
+  table.ds th,table.ds td{border:1px solid #e2dcc9;padding:10px 12px;text-align:start;vertical-align:top}
+  table.ds th{background:var(--cream);color:var(--navy);font-weight:700}
+  table.ds td.yes{color:#1f5f4e;font-weight:700}
+  table.ds td.no{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -60,34 +65,75 @@
     <strong>App:</strong> لَمَّةُ الْمَعْرِفَةِ (Lammat Al-Ma'rifa)<br>
     <strong>Package name:</strong> <code class="pkg">com.novanest.maani</code><br>
     <strong>Publisher:</strong> Novanest ATLAS<br>
-    <strong>Last updated:</strong> 2026-08-16
+    <strong>Last updated:</strong> 2026-08-17
   </div>
-<h2>Solo mode</h2><p>Solo can be used without the multiplayer backend. Gameplay progress, settings and functional statistics are stored locally on the device.</p><h2>Online Challenge</h2><p>Online Challenge requires internet access. On first Online use, a player chooses a nickname and accepts the Online Terms and privacy notice. The backend creates an opaque guest identifier and short-lived, revocable session credentials. It processes presence, challenges/invitations and match state/results needed to operate multiplayer.</p><p>The edge provider derives a two-letter country code from network connection metadata to display an approximate country flag. It may be inaccurate. The app does not request GPS/precise-location permission. Application code does not expose a raw IP address to other players; the infrastructure provider necessarily processes network metadata to provide HTTPS/WSS and abuse protection.</p><p>We do not ask for email, phone number, real name, password, birth date, contacts, social login, profile picture or precise location. There is no public chat, private messaging or user image/audio/file upload in this release.</p><h2>Blocks, reports and retention</h2><p>Players can block or report visible nicknames using limited reason categories. Presence/join requests expire quickly. The source defaults are 1 hour for post-match object state, 90 days for moderation evidence and 31 days for identity-deletion tombstones; the publisher must review these before deployment.</p><h2>Delete/reset Online identity</h2><p>Settings includes Delete/Reset Online Identity. After an authenticated delete succeeds, local Online identity/session state is removed. Limited moderation evidence may remain for its disclosed retention period where needed for safety, abuse prevention or legal compliance.</p><h2>Advertising and consent</h2><p>Ads are disabled by default. If the publisher enables Google AdMob, consent information must be refreshed at app launch through Google UMP, ads must only be requested when permitted, and a privacy-options entry point must be shown when required. Online gameplay does not depend on advertising consent.</p><h2>Security and transport</h2><p>Production Online traffic uses HTTPS/WSS. Backend signing/session secrets are server-side only and are not shipped in the app.</p>
+
+  <h2 id="summary">What this app collects — summary</h2>
+  <p>This table mirrors, item for item, the Data safety declaration filed for this
+  app in Google Play Console. If the two ever differ, the Play Console
+  declaration is the one we correct.</p>
+
+  <table class="ds">
+    <thead>
+      <tr><th>Data type</th><th>Collected</th><th>Shared with a third party</th><th>Purpose</th><th>Optional?</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>User IDs</strong><br><span class="small">nickname and an opaque guest identifier</span></td>
+        <td class="yes">Yes</td>
+        <td class="no">No</td>
+        <td>App functionality (multiplayer)</td>
+        <td>Yes — Online only</td>
+      </tr>
+      <tr>
+        <td><strong>Approximate location</strong><br><span class="small">two-letter country code derived from connection metadata</span></td>
+        <td class="yes">Yes</td>
+        <td class="no">No</td>
+        <td>App functionality (country flag)</td>
+        <td>Yes — Online only</td>
+      </tr>
+      <tr>
+        <td><strong>Device or other IDs</strong><br><span class="small">Android advertising ID</span></td>
+        <td class="yes">Yes</td>
+        <td class="yes">Yes — to Google</td>
+        <td>Advertising or marketing; fraud prevention, security and compliance</td>
+        <td>No — collected whenever ads are shown</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Nothing else is collected. The app does not ask for an email address, phone
+  number, real name, password, date of birth, contacts, social login, profile
+  picture or precise/GPS location. There is no public chat, private messaging, or
+  user upload of images, audio or files in this release.</p>
+
+<h2>Solo mode</h2><p>Solo can be played without the multiplayer backend and without a nickname. Gameplay progress, settings and functional statistics are stored locally on the device and are not transmitted. Advertising, described below, applies in Solo mode as it does elsewhere in the app.</p><h2>Online Challenge</h2><p>Online Challenge requires internet access and is optional. On first Online use, a player chooses a nickname and accepts the Online Terms and privacy notice. Our backend creates an opaque guest identifier and short-lived, revocable session credentials. It processes presence, challenges and invitations, and match state and results, as needed to operate multiplayer.</p><p>The nickname, the guest identifier and the country code are transmitted to and stored on our own backend, which runs on Cloudflare Workers as our infrastructure provider acting on our instructions. They are not sold, and are not shared with advertisers or any other third party.</p><p>The edge provider derives a two-letter country code from network connection metadata to display an approximate country flag. It may be inaccurate. The app does not request GPS or precise-location permission. Application code does not expose a raw IP address to other players; the infrastructure provider necessarily processes network metadata to provide HTTPS/WSS and abuse protection.</p><h2>Blocks, reports and retention</h2><p>Players can block or report visible nicknames using limited reason categories. Presence records and join requests expire quickly. Post-match object state is retained for 1 hour, moderation evidence for 90 days, and identity-deletion tombstones for 31 days.</p><h2>Delete/reset Online identity</h2><p>Settings includes Delete/Reset Online Identity. After an authenticated delete succeeds, local Online identity and session state are removed. Limited moderation evidence may remain for its disclosed retention period where needed for safety, abuse prevention or legal compliance.</p><h2>Security and transport</h2><p>All Online traffic uses HTTPS and WSS, so data is encrypted in transit. Backend signing and session secrets are held server-side only and are not shipped inside the app.</p>
   <h2>Contact</h2>
   <p>For any question about this policy, or to request deletion of an Online identity, write to
   <a href="mailto:quizzy.quest.planet@gmail.com">quizzy.quest.planet@gmail.com</a>.</p>
 
   <h2 id="advertising-admob">Advertising, the advertising ID, and your choices</h2>
 
-  <p><strong>لَمَّةُ الْمَعْرِفَةِ (Lammat Al-Ma'rifa)</strong> (<code class="pkg">com.novanest.maani</code>) uses
-  <strong>Google AdMob</strong> for advertising. This section is the disclosure
-  Google requires of every publisher that uses its advertising SDKs, and it
-  matches what is declared in the Play Console Data safety form for this app.</p>
+  <p><strong>لَمَّةُ الْمَعْرِفَةِ (Lammat Al-Ma'rifa)</strong> (<code class="pkg">com.novanest.maani</code>) shows
+  advertising through <strong>Google AdMob</strong>. Banner and interstitial ads are
+  part of this release. This section is the disclosure Google requires of every
+  publisher that uses its advertising SDKs, and it matches the Data safety
+  declaration filed for this app in Play Console.</p>
 
   <h3>What is collected, and by whom</h3>
-  <p>We do not collect, store or transmit personal data ourselves. The Google
-  Mobile Ads SDK inside the app does collect data in order to serve and measure
-  ads. It reads the <strong>Android advertising ID</strong> — a resettable
+  <p>The Google Mobile Ads SDK inside the app collects data in order to serve and
+  measure ads. It reads the <strong>Android advertising ID</strong> — a resettable
   identifier assigned by your device — and sends it with each ad request,
   together with coarse technical information such as device model, operating
   system version, language, and the IP address that every network request
   necessarily carries.</p>
 
   <p>That identifier is used to select ads, limit how often you see the same one,
-  measure performance, and detect fraudulent activity. It is sent to Google, which
-  may make it available to its advertising partners. We receive only aggregate
-  reporting — how many ads were shown and what they earned. Those reports contain
-  nothing that identifies any individual.</p>
+  measure performance, and detect fraudulent activity. It is <strong>sent to
+  Google and shared with Google's advertising partners</strong>. We receive only
+  aggregate reporting — how many ads were shown and what they earned. Those
+  reports contain nothing that identifies any individual, and the advertising ID
+  is never joined to your nickname or guest identifier.</p>
 
   <p>How Google uses data from apps that use its services:
   <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>.
