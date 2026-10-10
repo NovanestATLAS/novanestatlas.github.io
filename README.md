@@ -11,7 +11,7 @@ Static site served by GitHub Pages. It exists for three reasons:
 
 | File | Purpose |
 |---|---|
-| `index.html` | Root page — studio hub, links to all four apps. **This URL goes in the Play "Website" field for EVERY app.** |
+| `index.html` | Root page — studio hub, links to all five apps. **This URL goes in the Play "Website" field for EVERY app.** |
 | `app-ads.txt` | Authorized Sellers file. Must stay at the root. Covers every app under publisher ID `pub-3709043100488694`. |
 | `robots.txt` | Explicitly allows the `Google-adstxt` crawler. |
 | `maarifa.html` | Lammat Al-Ma'rifa app page. |
@@ -22,6 +22,8 @@ Static site served by GitHub Pages. It exists for three reasons:
 | `civics-privacy.html` | US Citizenship Test Audio privacy policy. |
 | `jobsite.html` | Job Site Calc app page. |
 | `jobsite-privacy.html` | Job Site Calc privacy policy. |
+| `concours.html` | Concours Maroc app page (French, with Arabic and English sections); links to Google Play and to www.maroc-concour.com. |
+| `concours-privacy.html` | Concours Maroc privacy policy (French, Arabic, English). |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 
 All images are embedded directly inside the HTML as base64 data URIs. There is no `img/`
@@ -35,6 +37,7 @@ folder and no external image files, so images cannot break through a wrong path.
 | ECL & ALCPT English Trainer | `com.novanest.ecltrainer` | `ecl.html` | `ecl-privacy.html` |
 | US Citizenship Test Audio | `com.novanest.civicsaudio` | `civics.html` | `civics-privacy.html` |
 | Job Site Calc | `com.novanest.jobsitecalc` | `jobsite.html` | `jobsite-privacy.html` |
+| Concours Maroc | `com.novanest.concoursmaroc` | `concours.html` | `concours-privacy.html` |
 
 ## AdMob disclosures — where they appear and why
 
@@ -77,6 +80,7 @@ Privacy policy URLs:
 - ECL & ALCPT English Trainer → `https://USERNAME.github.io/ecl-privacy.html`
 - US Citizenship Test Audio → `https://USERNAME.github.io/civics-privacy.html`
 - Job Site Calc → `https://USERNAME.github.io/jobsite-privacy.html`
+- Concours Maroc → `https://USERNAME.github.io/concours-privacy.html`
 
 Each privacy policy URL must be entered in three places per app: App content → Privacy policy,
 Main store listing, and App content → Data safety.
@@ -89,12 +93,17 @@ Main store listing, and App content → Data safety.
 | ECL & ALCPT English Trainer | `https://play.google.com/store/apps/details?id=com.ecltrainer.english` |
 | US Citizenship Test Audio | `https://play.google.com/store/apps/details?id=com.novanest.civicsaudio` |
 | Job Site Calc | `https://play.google.com/store/apps/details?id=com.novanest.jobsitecalc` |
+| Concours Maroc | `https://play.google.com/store/apps/details?id=com.novanest.concoursmaroc` (website: `https://www.maroc-concour.com`) |
 
 A store URL appears twice per app page: the **Get it on Google Play** button in the
 header, and the **Links** section at the foot of the page. Change both together.
 
 ## Still to do
 
+- `concours.html`, `index.html` — the Concours Maroc store URL assumes the package name
+  `com.novanest.concoursmaroc`; it opens once the app is published under that ID. If the
+  app ships with another ID, change the URL everywhere it appears (header button, Links
+  section, Arabic section, home card).
 - `maarifa.html` — the Google Play download button href is still `#` (two places)
 - `store/screenshots/` in the Job Site Calc project is still empty. The five shots
   on `jobsite.html` came from a phone; Play needs its own set at the required sizes.
