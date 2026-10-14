@@ -1,7 +1,7 @@
 {
-  "name": "CLP Test Prep",
+  "name": "CDL Test Prep",
   "description": "Free CDL practice tests with instant explanations and a manual reference for every answer.",
-  "short_name": "CLP Prep",
+  "short_name": "CDL Prep",
   "start_url": "/quizzyroad/",
   "display": "standalone",
   "background_color": "#f7f8fb",
@@ -13,17 +13,17 @@
       "type": "image/svg+xml"
     },
     {
-      "src": "/quizzyroad/icons/clp-test-prep-icon-192.png",
+      "src": "/quizzyroad/icons/cdl-test-prep-icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/quizzyroad/icons/clp-test-prep-icon-512.png",
+      "src": "/quizzyroad/icons/cdl-test-prep-icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/quizzyroad/icons/clp-test-prep-maskable-512.png",
+      "src": "/quizzyroad/icons/cdl-test-prep-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
