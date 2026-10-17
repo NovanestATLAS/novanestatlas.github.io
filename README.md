@@ -24,6 +24,8 @@ Static site served by GitHub Pages. It exists for three reasons:
 | `jobsite-privacy.html` | Job Site Calc privacy policy. |
 | `concours.html` | Concours Maroc app page (French, with Arabic and English sections); links to Google Play and to www.maroc-concour.com. |
 | `concours-privacy.html` | Concours Maroc privacy policy (French, Arabic, English). |
+| `cdltestprep.html` | CDL Test Prep app page (links to Google Play and cdl-testprep.com). |
+| `cdltestprep-privacy.html` | CDL Test Prep privacy policy (AdMob, Firebase, Google Play, US state privacy rights). |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 
 All images are embedded directly inside the HTML as base64 data URIs. There is no `img/`
@@ -38,6 +40,7 @@ folder and no external image files, so images cannot break through a wrong path.
 | US Citizenship Test Audio | `com.novanest.civicsaudio` | `civics.html` | `civics-privacy.html` |
 | Job Site Calc | `com.novanest.jobsitecalc` | `jobsite.html` | `jobsite-privacy.html` |
 | Concours Maroc | `com.novanest.concoursmaroc` | `concours.html` | `concours-privacy.html` |
+| CDL Test Prep: Practice Tests | `com.cdltestprep.app` | `cdltestprep.html` | `cdltestprep-privacy.html` |
 
 ## AdMob disclosures — where they appear and why
 
@@ -81,6 +84,7 @@ Privacy policy URLs:
 - US Citizenship Test Audio → `https://USERNAME.github.io/civics-privacy.html`
 - Job Site Calc → `https://USERNAME.github.io/jobsite-privacy.html`
 - Concours Maroc → `https://USERNAME.github.io/concours-privacy.html`
+- CDL Test Prep → `https://USERNAME.github.io/cdltestprep-privacy.html`
 
 Each privacy policy URL must be entered in three places per app: App content → Privacy policy,
 Main store listing, and App content → Data safety.
@@ -94,6 +98,7 @@ Main store listing, and App content → Data safety.
 | US Citizenship Test Audio | `https://play.google.com/store/apps/details?id=com.novanest.civicsaudio` |
 | Job Site Calc | `https://play.google.com/store/apps/details?id=com.novanest.jobsitecalc` |
 | Concours Maroc | `https://play.google.com/store/apps/details?id=com.novanest.concoursmaroc` (website: `https://www.maroc-concour.com`) |
+| CDL Test Prep | `https://play.google.com/store/apps/details?id=com.cdltestprep.app` (website: `https://cdl-testprep.com`) |
 
 A store URL appears twice per app page: the **Get it on Google Play** button in the
 header, and the **Links** section at the foot of the page. Change both together.
