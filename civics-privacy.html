@@ -75,7 +75,7 @@
         App: US Citizenship Test Audio<br>
         Package name: <code style="background:rgba(255,255,255,.12);color:#f0dfa8">com.novanest.civicsaudio</code><br>
         Publisher: Novanest ATLAS<br>
-        Effective: 2026-08-30 &nbsp;·&nbsp; Last updated: 2026-08-30
+        Effective: 2026-08-30 &nbsp;·&nbsp; Last updated: 2026-10-26
       </div>
     </div>
   </div>
@@ -86,9 +86,10 @@
 
   <h2>The short version</h2>
   <p>The app keeps your study progress and settings on your own device and sends
-  them nowhere. It has no accounts and asks for no personal details. The one
-  component that touches the network is Google AdMob, which serves the ads that
-  pay for the app. Everything below is detail on those two facts.</p>
+  them nowhere. It has no accounts and asks for no personal details. The only
+  components that touch the network are the advertising SDKs — Google AdMob and,
+  through AdMob mediation, the partner ad networks listed below — which serve the
+  ads that pay for the app. Everything below is detail on those two facts.</p>
 
   <h2>What the app stores, and where</h2>
   <p>The app saves the following in local storage on your device:</p>
@@ -98,8 +99,9 @@
     <li>Mock test results</li>
     <li>Questions you have bookmarked</li>
     <li>Any answers you type yourself for state-specific questions</li>
-    <li>Your settings: voice, speaking speed, pitch, interface language, theme,
-    text size, and the hands-free pause length</li>
+    <li>Your settings: voice, speaking speed, pitch, interface language,
+    translation language, theme, text size, the hands-free pause length, and your
+    <em>Do not sell or share</em> choice</li>
     <li>Counters used to space out advertisements</li>
   </ul>
   <p>All of this stays on your device. None of it is uploaded, backed up to a
@@ -114,13 +116,14 @@
   at install time. The app does not download content, does not check for updates
   by itself, and does not send anything you do to any server. In airplane mode
   every study feature works exactly the same. The only network traffic comes from
-  the advertising component described below.</p>
+  the advertising components described below.</p>
 
   <h2 id="advertising">Advertising, the advertising ID, and your choices</h2>
 
   <p><strong>US Citizenship Test Audio</strong> (<code>com.novanest.civicsaudio</code>) shows ads through
-  <strong>Google AdMob</strong>. This section is the disclosure Google requires
-  of every publisher that uses its advertising SDKs.</p>
+  <strong>Google AdMob</strong>, which can fill an ad request from the partner
+  networks listed below through <strong>AdMob mediation</strong>. This section is the
+  disclosure Google requires of every publisher that uses its advertising SDKs.</p>
 
   <h3>What is collected, and by whom</h3>
   <p>We do not collect, store or transmit personal data ourselves. The Google
@@ -142,6 +145,23 @@
   Google's privacy policy:
   <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</p>
 
+  <h3 id="partners">Advertising partners (AdMob mediation)</h3>
+  <p>When one of these partners serves an ad, its SDK inside the app may receive the
+  same kinds of data as Google: the advertising ID, the IP address and the
+  approximate location it implies, device information and ad interactions, used for
+  ad delivery, measurement and fraud prevention. Each partner handles that data under
+  its own privacy policy:</p>
+  <ul>
+    <li><a href="https://www.applovin.com/privacy/" rel="noopener">AppLovin</a></li>
+    <li><a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta Audience Network</a></li>
+    <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">Unity Ads</a></li>
+    <li><a href="https://liftoff.io/privacy-policy/" rel="noopener">Liftoff Monetize</a></li>
+    <li><a href="https://www.mintegral.com/en/privacy" rel="noopener">Mintegral</a></li>
+    <li><a href="https://www.pangleglobal.com/privacy" rel="noopener">Pangle</a></li>
+    <li><a href="https://www.inmobi.com/privacy-policy" rel="noopener">InMobi</a></li>
+    <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">ironSource Ads (Unity)</a></li>
+  </ul>
+
   <h3>Your controls</h3>
   <ul>
     <li><strong>Reset or delete the advertising ID.</strong> On most Android
@@ -155,6 +175,12 @@
     entry in the app's settings.</li>
     <li><strong>Non-personalised ads.</strong> If you decline consent, ads may
     still be shown but are not personalised using your advertising ID.</li>
+    <li><strong>Do not sell or share (United States).</strong> In the app:
+    <em>Settings → Privacy and ads → Do not sell or share my personal
+    information</em>. When it is on, the app asks Google for non-personalised ads
+    and tells every partner listed above, through that partner's own privacy
+    setting, not to sell or share your personal information. Ads still appear, but
+    they are not personalised from your data.</li>
   </ul>
 
   <h3>Authorized sellers</h3>
@@ -170,8 +196,8 @@
 
   <h3>Retention and deletion</h3>
   <p>We hold no personal data on any server, so there is nothing on our side to
-  retain or delete. Data handled by Google is retained under Google's own
-  policies, linked above. Everything the app stores stays on your device and is
+  retain or delete. Data handled by Google and its mediation partners is retained
+  under their own policies, linked above. Everything the app stores stays on your device and is
   removed by the app's reset option or by uninstalling it.</p>
 
   <h2>Permissions the app does not request</h2>
@@ -195,8 +221,8 @@
   held about you. We hold no personal data about you, so there is nothing for us
   to give you, correct or delete. You already hold everything the app produces, on
   your own device, and you can erase it at any moment without asking anyone.</p>
-  <p>For data processed by Google in connection with advertising, exercise your
-  rights directly with Google using the links above, or reset or delete your
+  <p>For data processed by Google or a mediation partner in connection with
+  advertising, exercise your rights directly with that company using the links above, or reset or delete your
   advertising ID as described there. If you are in the EEA or the UK you also have
   the right to lodge a complaint with your national data protection authority.</p>
 
