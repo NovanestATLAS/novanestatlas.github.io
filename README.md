@@ -30,6 +30,7 @@ Static site served by GitHub Pages. It exists for three reasons:
 | `assets/fonts/` | Self-hosted Reem Kufi (headings) and Readex Pro (text), Arabic and Latin subsets, with their OFL licences. |
 | `assets/mark.svg` | Studio mark and favicon. |
 | `og/` | Link-preview images (1200×630) for Facebook, WhatsApp, TikTok and X. |
+| `CNAME` | Custom domain: `novanest-atlas.net`. novanestatlas.github.io redirects to it. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 
 Page images (screenshots, app icons) are embedded inside the HTML as base64 data URIs, so they
@@ -44,7 +45,7 @@ cannot break through a wrong path. Three deliberate exceptions:
 
 The Lammat Al-Ma'rifa page opens with five playable sample questions and has a WhatsApp share
 button and a sticky download bar on phones. It is the page to link from social-media profiles
-(`https://novanestatlas.github.io/maarifa.html`). The home page lists the apps in this order: ECL & ALCPT
+(`https://novanest-atlas.net/maarifa.html`). The home page lists the apps in this order: ECL & ALCPT
 (with www.ecl-alcpt-trainer.com), Concours Maroc (with www.maroc-concour.com), US Citizenship Test Audio,
 Lammat Al-Ma'rifa, Job Site Calc, and CDL Test Prep, which links only to www.cdl-testprep.com until the app is live.
 
@@ -128,3 +129,12 @@ header, and the **Links** section at the foot of the page. Change both together.
   section, Arabic section, home card).
 - `store/screenshots/` in the Job Site Calc project is still empty. The five shots
   on `jobsite.html` came from a phone; Play needs its own set at the required sizes.
+
+## Custom domain (novanest-atlas.net)
+
+DNS at Spaceship: four `A` records for `@` → 185.199.108.153, 185.199.109.153, 185.199.110.153,
+185.199.111.153, and `CNAME` `www` → `novanestatlas.github.io`. Then Settings → Pages → Enforce HTTPS.
+
+AdMob reads `app-ads.txt` only from the domain in each app's Play Console **Website** field, and does not
+follow a redirect to another domain. After the switch, set Website = `https://novanest-atlas.net/` for every
+app, and update the privacy policy URLs to `https://novanest-atlas.net/<app>-privacy.html`.
