@@ -26,10 +26,25 @@ Static site served by GitHub Pages. It exists for three reasons:
 | `concours-privacy.html` | Concours Maroc privacy policy (French, Arabic, English). |
 | `cdltestprep.html` | CDL Test Prep app page (links to Google Play and cdl-testprep.com). |
 | `cdltestprep-privacy.html` | CDL Test Prep privacy policy (AdMob, Firebase, Google Play, US state privacy rights). |
+| `assets/site.css` | Shared design for every app page (night indigo, lantern gold, zellige lattice). |
+| `assets/fonts/` | Self-hosted Reem Kufi (headings) and Readex Pro (text), Arabic and Latin subsets, with their OFL licences. |
+| `assets/mark.svg` | Studio mark and favicon. |
+| `og/` | Link-preview images (1200×630) for Facebook, WhatsApp, TikTok and X. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 
-All images are embedded directly inside the HTML as base64 data URIs. There is no `img/`
-folder and no external image files, so images cannot break through a wrong path.
+Page images (screenshots, app icons) are embedded inside the HTML as base64 data URIs, so they
+cannot break through a wrong path. Three deliberate exceptions:
+
+- `og/*.jpg` are real files, because Facebook, WhatsApp and other link-preview crawlers need a URL.
+- `assets/` holds the shared stylesheet, fonts and studio mark used by every app page.
+- The Lammat Al-Ma'rifa icon is loaded from its Google Play listing
+  (`play-lh.googleusercontent.com/...`), so the site always shows the icon of the live store listing.
+  If the icon changes on Play and the old URL stops working, the page shows a gold star placeholder;
+  copy the new icon URL from the store listing into `index.html` and `maarifa.html`.
+
+The Lammat Al-Ma'rifa page opens with five playable sample questions and has a WhatsApp share
+button and a sticky download bar on phones. It is the page to link from social-media profiles
+(`https://novanestatlas.github.io/maarifa.html`); the home page features the game first.
 
 ## Apps and package names
 
@@ -93,7 +108,7 @@ Main store listing, and App content → Data safety.
 
 | App | Store URL |
 |---|---|
-| Lammat Al-Ma'rifa | not yet linked — button href is still `#` |
+| Lammat Al-Ma'rifa | `https://play.google.com/store/apps/details?id=com.novanest.maani` |
 | ECL & ALCPT English Trainer | `https://play.google.com/store/apps/details?id=com.ecltrainer.english` |
 | US Citizenship Test Audio | `https://play.google.com/store/apps/details?id=com.novanest.civicsaudio` |
 | Job Site Calc | `https://play.google.com/store/apps/details?id=com.novanest.jobsitecalc` |
@@ -109,6 +124,5 @@ header, and the **Links** section at the foot of the page. Change both together.
   `com.novanest.concoursmaroc`; it opens once the app is published under that ID. If the
   app ships with another ID, change the URL everywhere it appears (header button, Links
   section, Arabic section, home card).
-- `maarifa.html` — the Google Play download button href is still `#` (two places)
 - `store/screenshots/` in the Job Site Calc project is still empty. The five shots
   on `jobsite.html` came from a phone; Play needs its own set at the required sizes.
