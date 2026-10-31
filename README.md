@@ -26,7 +26,7 @@ Static site served by GitHub Pages. It exists for three reasons:
 | `concours-privacy.html` | Concours Maroc privacy policy (French, Arabic, English). |
 | `cdltestprep.html` | CDL Test Prep app page (links to Google Play and cdl-testprep.com). |
 | `cdltestprep-privacy.html` | CDL Test Prep privacy policy (AdMob, Firebase, Google Play, US state privacy rights). |
-| `assets/site.css` | Shared design for every app page (night indigo, lantern gold, zellige lattice). |
+| `assets/site.css` | Design of the home page and the Lammat Al-Ma'rifa page (night indigo, lantern gold, zellige lattice). The other app pages keep their own inline styles. |
 | `assets/fonts/` | Self-hosted Reem Kufi (headings) and Readex Pro (text), Arabic and Latin subsets, with their OFL licences. |
 | `assets/mark.svg` | Studio mark and favicon. |
 | `og/` | Link-preview images (1200×630) for Facebook, WhatsApp, TikTok and X. |
@@ -36,7 +36,7 @@ Page images (screenshots, app icons) are embedded inside the HTML as base64 data
 cannot break through a wrong path. Three deliberate exceptions:
 
 - `og/*.jpg` are real files, because Facebook, WhatsApp and other link-preview crawlers need a URL.
-- `assets/` holds the shared stylesheet, fonts and studio mark used by every app page.
+- `assets/` holds the stylesheet, fonts and studio mark used by the home page and the Lammat Al-Ma'rifa page.
 - The Lammat Al-Ma'rifa icon is loaded from its Google Play listing
   (`play-lh.googleusercontent.com/...`), so the site always shows the icon of the live store listing.
   If the icon changes on Play and the old URL stops working, the page shows a gold star placeholder;
@@ -44,7 +44,9 @@ cannot break through a wrong path. Three deliberate exceptions:
 
 The Lammat Al-Ma'rifa page opens with five playable sample questions and has a WhatsApp share
 button and a sticky download bar on phones. It is the page to link from social-media profiles
-(`https://novanestatlas.github.io/maarifa.html`); the home page features the game first.
+(`https://novanestatlas.github.io/maarifa.html`). The home page lists the apps in this order: ECL & ALCPT
+(with www.ecl-alcpt-trainer.com), Concours Maroc (with www.maroc-concour.com), US Citizenship Test Audio,
+Lammat Al-Ma'rifa, Job Site Calc, and CDL Test Prep, which links only to www.cdl-testprep.com until the app is live.
 
 ## Apps and package names
 
