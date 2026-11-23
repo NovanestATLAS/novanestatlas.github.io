@@ -18,7 +18,7 @@ Static site served by GitHub Pages. It exists for three reasons:
 | `maarifa-privacy.html` | Lammat Al-Ma'rifa privacy policy. |
 | `ecl.html` | ECL & ALCPT English Trainer app page. |
 | `ecl-privacy.html` | ECL & ALCPT English Trainer privacy policy. |
-| `civics.html` | US Citizenship Test Audio app page. |
+| `civics.html` | US Citizenship Test Audio app page, with a playable 8-question audio civics test and reading and writing samples. |
 | `civics-privacy.html` | US Citizenship Test Audio privacy policy. |
 | `jobsite.html` | Job Site Calc app page. |
 | `jobsite-privacy.html` | Job Site Calc privacy policy. |
@@ -30,6 +30,8 @@ Static site served by GitHub Pages. It exists for three reasons:
 | `assets/fonts/` | Self-hosted Reem Kufi (headings) and Readex Pro (text), Arabic and Latin subsets, with their OFL licences. |
 | `assets/mark.svg` | Studio mark and favicon. |
 | `og/` | Link-preview images (1200×630) for Facebook, WhatsApp, TikTok and X. |
+| `assets/audio/civics/` | The 30 sample clips played on `civics.html` (questions, answers, explanations, reading and writing sentences). |
+| `tools/civics-audio/` | `clips.json` (the spoken text of every clip) and `elevenlabs.mjs`, which regenerates the clips with an ElevenLabs voice. |
 | `CNAME` | Custom domain: `novanest-atlas.net`. novanestatlas.github.io redirects to it. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 
@@ -37,11 +39,21 @@ Page images (screenshots, app icons) are embedded inside the HTML as base64 data
 cannot break through a wrong path. Three deliberate exceptions:
 
 - `og/*.jpg` are real files, because Facebook, WhatsApp and other link-preview crawlers need a URL.
+- `assets/audio/civics/*.mp3` are real files, loaded only when a visitor presses play.
 - `assets/` holds the stylesheet, fonts and studio mark used by the home page and the Lammat Al-Ma'rifa page.
 - The Lammat Al-Ma'rifa icon is loaded from its Google Play listing
   (`play-lh.googleusercontent.com/...`), so the site always shows the icon of the live store listing.
   If the icon changes on Play and the old URL stops working, the page shows a gold star placeholder;
   copy the new icon URL from the store listing into `index.html` and `maarifa.html`.
+
+The US Citizenship Test Audio page (`civics.html`) opens with a playable 8-question civics test: audio for
+each question, answer and explanation, self-marking, hands-free mode, 65/20 and listen-only options,
+Spanish/French/Arabic translations and tap-a-word translation from a small built-in glossary (no network
+call). Its demo questions, answers, explanations and translations live in a JSON block at the end of the
+page. The clips were made with the open-source Kokoro TTS voice `af_heart`; to switch to ElevenLabs, run
+`$env:ELEVENLABS_API_KEY = "your-key"; node tools/civics-audio/elevenlabs.mjs` from the repo root and
+commit `assets/audio/civics/`. If you change a clip's text, change it in `tools/civics-audio/clips.json`
+and in the page's JSON block.
 
 The Lammat Al-Ma'rifa page opens with five playable sample questions and has a WhatsApp share
 button and a sticky download bar on phones. It is the page to link from social-media profiles

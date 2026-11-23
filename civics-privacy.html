@@ -44,7 +44,7 @@
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px;padding:0;list-style:none}
   .chips li{background:var(--cream);border:1px solid #e2dcc9;border-radius:20px;padding:5px 14px;font-size:14px;margin:0}
   footer{margin-top:52px;background:var(--cream);padding:30px 0 44px;font-size:14px;color:var(--muted)}
-  footer a{color:var(--gold)}
+  footer a{color:#8a5a00}
   .en{border-top:1px solid #e2dcc9;margin-top:40px;padding-top:26px;direction:ltr;text-align:left;font-size:15px;color:#444}
   @media(max-width:640px){h1{font-size:24px}.shots figure{width:45%}}
 
@@ -76,7 +76,7 @@
         App: US Citizenship Test Audio<br>
         Package name: <code style="background:rgba(255,255,255,.12);color:#f0dfa8">com.novanest.civicsaudio</code><br>
         Publisher: Novanest ATLAS<br>
-        Effective: 2026-08-30 &nbsp;·&nbsp; Last updated: 2026-11-22
+        Effective: 2026-08-30 &nbsp;·&nbsp; Last updated: 2026-11-23
       </div>
     </div>
   </div>
@@ -87,10 +87,12 @@
 
   <h2>The short version</h2>
   <p>The app keeps your study progress and settings on your own device and sends
-  them nowhere. It has no accounts and asks for no personal details. The only
-  components that touch the network are the advertising SDKs — Google AdMob and,
-  through AdMob mediation, the partner ad networks listed below — which serve the
-  ads that pay for the app. Everything below is detail on those two facts.</p>
+  them nowhere. It has no accounts and asks for no personal details. Two things
+  touch the network: the advertising SDKs — Google AdMob and, through AdMob
+  mediation, the partner ad networks listed below — which serve the ads that pay
+  for the app, and the optional <a href="#translate">tap-to-translate</a> feature, which
+  sends only the word or sentence you tap to Google's translation service.
+  Everything below is detail on those facts.</p>
 
   <h2>What the app stores, and where</h2>
   <p>The app saves the following in local storage on your device:</p>
@@ -112,12 +114,27 @@
   <p>The app contains no account system, no sign-up, no login and no email
   collection. We do not know who you are.</p>
 
-  <h2>The app itself makes no network requests</h2>
+  <h2>What the app sends over the network</h2>
   <p>Questions, answers, explanations and translations are packaged inside the app
   at install time. The app does not download content, does not check for updates
-  by itself, and does not send anything you do to any server. In airplane mode
-  every study feature works exactly the same. The only network traffic comes from
-  the advertising components described below.</p>
+  by itself, and does not send your progress, your settings or anything you type to
+  any server. In airplane mode every study feature works exactly the same, except
+  tap-to-translate.</p>
+
+  <h3 id="translate">Tap-to-translate</h3>
+  <p>When you tap a word in a question, an answer or an explanation, the app shows
+  its translation in the language you chose in Settings, or in your phone's language
+  if you chose none. To do this it sends <strong>only the tapped word</strong> — or the
+  whole sentence, if you tap <em>Translate the sentence</em> — and the target language
+  to Google's translation service (<code>translate.googleapis.com</code> or
+  <code>translation.googleapis.com</code>). Nothing is sent until you tap, and the
+  request carries no account, name or advertising ID. Like any internet request it
+  reaches Google with your IP address; Google handles it under the
+  <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
+  Tap-to-translate needs an internet connection, and you can turn it off in
+  Settings; the rest of the app is unaffected.</p>
+  <p>Apart from that, the only network traffic comes from the advertising components
+  described below.</p>
 
   <h2 id="advertising">Advertising, the advertising ID, and your choices</h2>
 
@@ -187,7 +204,7 @@
   <h3>Authorized sellers</h3>
   <p>Our <code>app-ads.txt</code> declares publisher ID
   <code>pub-3709043100488694</code> and is served from the root of this domain:</p>
-  <pre class="adstxt">google.com, pub-3709043100488694, DIRECT, f08c47fec0942fa0</pre>
+  <pre class="adstxt" tabindex="0" aria-label="app-ads.txt line">google.com, pub-3709043100488694, DIRECT, f08c47fec0942fa0</pre>
   <p><a href="app-ads.txt">View app-ads.txt</a></p>
 
   <h3>Children</h3>
