@@ -90,8 +90,8 @@
   them nowhere. It has no accounts and asks for no personal details. Two things
   touch the network: the advertising SDKs — Google AdMob and, through AdMob
   mediation, the partner ad networks listed below — which serve the ads that pay
-  for the app, and the optional <a href="#translate">tap-to-translate</a> feature, which
-  sends only the word or sentence you tap to Google's translation service.
+  for the app, and the optional <a href="#translate">translation</a> feature, which
+  sends only the text being translated to Google's translation service.
   Everything below is detail on those facts.</p>
 
   <h2>What the app stores, and where</h2>
@@ -119,20 +119,21 @@
   at install time. The app does not download content, does not check for updates
   by itself, and does not send your progress, your settings or anything you type to
   any server. In airplane mode every study feature works exactly the same, except
-  tap-to-translate.</p>
+  translation.</p>
 
-  <h3 id="translate">Tap-to-translate</h3>
-  <p>When you tap a word in a question, an answer or an explanation, the app shows
-  its translation in the language you chose in Settings, or in your phone's language
-  if you chose none. To do this it sends <strong>only the tapped word</strong> — or the
-  whole sentence, if you tap <em>Translate the sentence</em> — and the target language
-  to Google's translation service (<code>translate.googleapis.com</code> or
-  <code>translation.googleapis.com</code>). Nothing is sent until you tap, and the
-  request carries no account, name or advertising ID. Like any internet request it
-  reaches Google with your IP address; Google handles it under the
+  <h3 id="translate">Translation</h3>
+  <p>The app translates questions, answers and explanations into the language you
+  choose in Settings, or into your phone's language if you choose none; tapping a
+  word shows that word's translation, and <em>Translate the sentence</em> translates
+  the whole line. To do this it sends <strong>only the text being translated</strong> and
+  the target language to Google's translation service
+  (<code>translate.googleapis.com</code> or <code>translation.googleapis.com</code>).
+  The request carries no account, name or advertising ID, and nothing about your
+  progress. Like any internet request it reaches Google with your IP address; Google
+  handles it under the
   <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
-  Tap-to-translate needs an internet connection, and you can turn it off in
-  Settings; the rest of the app is unaffected.</p>
+  Translation needs an internet connection, and you can turn it off in Settings;
+  the rest of the app is unaffected.</p>
   <p>Apart from that, the only network traffic comes from the advertising components
   described below.</p>
 
